@@ -5,8 +5,8 @@ from flask_restplus import Api
 
 log = logging.getLogger(__name__)
 
-api = Api(version='1.0', title='Test Python API',
-          description='A simple demonstration of a Flask RestPlus powered API')
+api = Api(version='1.0', title='Grozeille Home API',
+          description='Do what you wanna do :)')
 
 
 @api.errorhandler

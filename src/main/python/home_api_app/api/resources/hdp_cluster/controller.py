@@ -28,7 +28,7 @@ class Cluster(Resource):
         return None, 201
 
     @api.response(204, 'Cluster successfully deleted.')
-    def delete(self, id):
+    def delete(self):
         """
         Deletes the cluster.
         """

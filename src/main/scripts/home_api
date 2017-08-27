@@ -9,7 +9,7 @@ import socket
 if __name__ == '__main__':
     logging.config.fileConfig(os.path.join(os.path.dirname(os.path.realpath(__file__)),'home_api_logging.conf'))
 
-    current_hostname = socket.gethostname()
+    current_hostname = socket.gethostbyname(socket.gethostname())
 
     parser = argparse.ArgumentParser(description='Start Home API')
     parser.add_argument('--host',
