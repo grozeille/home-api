@@ -21,7 +21,8 @@ class App:
         self.app.register_blueprint(blueprint)
 
         self.log.info('>>>>> Starting development server at http://{}/api/ <<<<<'.format(self.app.config['SERVER_NAME']))
-        self.app.run(debug=self.settings["FLASK_DEBUG"])
+        server_name_split = str(self.app.config['SERVER_NAME']).split(":")
+        self.app.run(host=server_name_split[0], port=int(server_name_split[1]), debug=self.settings["FLASK_DEBUG"])
 
 
     def configure_app(self):
