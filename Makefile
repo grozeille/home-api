@@ -23,7 +23,7 @@ venv/bin/activate: check-prerequisites
 check-prerequisites: check-virtualenv check-pybuilder
 
 check-virtualenv:
-	@type shell virtualenv --version >/dev/null 2>&1
+	@type virtualenv --version >/dev/null 2>&1
 
 check-pybuilder:
-	@type shell pyb --version >/dev/null 2>&1
+	@type pyb --version >/dev/null 2>&1
